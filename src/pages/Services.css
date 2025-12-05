@@ -1,122 +1,141 @@
-.service-block {
+.services-page {
+  background: #fafafa;
+  padding-bottom: 80px;
+  font-family: "Inter", sans-serif;
+}
+
+/* HERO */
+.services-hero {
+  height: 55vh;
+  background-size: cover;
+  background-position: center;
   display: flex;
-  flex-direction: row;
-  align-items: center; /* Vertically center content */
-  justify-content: space-between;
-  gap: 2rem;
-  width: 100%;
-  padding: 4rem 2rem;
-  box-sizing: border-box;
-}
-
-/* Text section */
-.service-text {
-  flex: 1;
-  padding: 0 5rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: left;
-}
-
-.service-text h2 {
-  font-size: 3rem;
-  margin-bottom: 1rem;
-  font-weight: 700;
-}
-
-.service-text p {
-  font-size: 1.2rem;
-  line-height: 1.8;
-  color: #333;
-}
-
-/* Image section */
-.service-image-wrapper {
-  flex: 1;
-  display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
 }
 
-.service-image {
+.hero-title {
+  font-size: 3rem;
+  font-weight: 600;
+  color: #111;
+}
+
+.hero-title span {
+  background: yellow;
+}
+
+/* SERVICE GRID */
+.service-grid {
+  width: 75%;
+  margin: 50px auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+}
+
+/* TILES */
+.service-tile {
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.image-tile .service-img {
   width: 100%;
-  max-width: 400px;
-  height: auto;
+  height: 250px;
   object-fit: cover;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-/* ✅ Large Tablets (≤ 992px) */
-@media (max-width: 992px) {
-  .service-block {
-    gap: 1.5rem;
-    padding: 3rem 1.5rem;
-  }
-
-  .service-text {
-    padding: 0 3rem;
-  }
-
-  .service-text h2 {
-    font-size: 2.4rem;
-  }
-
-  .service-text p {
-    font-size: 1.1rem;
-  }
-
-  .service-image {
-    max-width: 350px;
-  }
+.text-tile {
+  background: #fff;
+  padding: 30px 25px;
+  text-align: center;
 }
 
-/* ✅ Tablets & Small Laptops (≤ 768px) */
-@media (max-width: 768px) {
-  .service-block {
+.text-dark-tile {
+  background: #000;
+  padding: 35px 28px;
+  color: white;
+  text-align: center;
+}
+
+.service-text-box h2 {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+.service-text-box p {
+  font-size: 0.95rem;
+  color: #666;
+  line-height: 1.5;
+}
+
+/* HOW IT WORKS */
+.how-it-works {
+  width: 70%;
+  margin: 90px auto;
+}
+
+.hiw-title {
+  text-align: center;
+  font-size: 2.4rem;
+  margin-bottom: 40px;
+  font-weight: 600;
+}
+
+.hiw-title span {
+  background: yellow;
+}
+
+/* BLOCK */
+.hiw-block {
+  background: #fff;
+  border-radius: 12px;
+  padding: 35px 40px;
+  margin-bottom: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05);
+}
+
+/* Icons */
+.hiw-icon img,
+.hiw-icon svg {
+  width: 80px;
+  height: auto;
+}
+
+/* Text */
+.hiw-text h3 {
+  font-size: 1.4rem;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.hiw-text p {
+  font-size: 0.95rem;
+  color: #666;
+  line-height: 1.5;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .service-grid {
+    grid-template-columns: 1fr;
+    width: 90%;
+  }
+
+  .how-it-works {
+    width: 90%;
+  }
+
+  .hiw-block {
     flex-direction: column;
     text-align: center;
-    padding: 3rem 1rem;
   }
 
-  .service-text {
-    padding: 0 1rem;
-    text-align: center;
-  }
-
-  .service-text h2 {
-    font-size: 2rem;
-  }
-
-  .service-text p {
-    font-size: 1rem;
-  }
-
-  .service-image {
-    max-width: 100%;
-    margin-top: 1.5rem;
-  }
-}
-
-/* ✅ Phones (≤ 480px) */
-@media (max-width: 480px) {
-  .service-block {
-    padding: 2rem 1rem;
-    gap: 1rem;
-  }
-
-  .service-text h2 {
-    font-size: 1.6rem;
-  }
-
-  .service-text p {
-    font-size: 0.95rem;
-    line-height: 1.6;
-  }
-
-  .service-image {
-    max-width: 100%;
-    border-radius: 6px;
+  .hiw-icon {
+    margin-bottom: 15px;
   }
 }

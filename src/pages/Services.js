@@ -1,83 +1,148 @@
 import React from "react";
 import "./Services.css";
-import backgroundImage from "./background.png"; // Image in src/pages
+import backgroundImage from "./background.png";
+
+// React Icons
+import { FaRegFileAlt, FaRegCheckCircle } from "react-icons/fa";
+
+import { FiSend } from "react-icons/fi";
 
 const services = [
   {
-    title: "Scalable Computing Power for Cryo-EM Research",
+    type: "text",
+    title: "Programming And Integration",
     description:
-      "Our Cryo-EM Cloud Application is designed to meet the evolving demands of structural biology research. Built on a highly scalable infrastructure, it offers dynamic resource allocation that adjusts seamlessly to your project’s complexity. Whether you're working with small datasets or large-scale Cryo-EM data, our platform delivers the computational power required for fast, efficient, and reliable analysis—empowering researchers to accelerate discoveries without hardware limitations.",
+      "Our Cryo-EM Cloud Application is designed to meet the evolving demands of structural biology research. Built on a highly scalable infrastructure, it offers dynamic resource allocation that adjusts effortlessly to your project’s complexity.",
+  },
+  {
+    type: "image",
     image: "/modelling.jpg",
   },
   {
-    title: "Advanced Security Protocols",
-    description:
-      "We prioritize the security of your data. Our cloud application incorporates industry-leading encryption technologies, multi-factor authentication, and regular security audits to protect your sensitive research information. Rest assured, your data is safe from unauthorized access and breaches, allowing you to focus on your research without worrying about data security.",
+    type: "image",
     image: "/screening.png",
   },
   {
-    title: "Seamless Data Management",
+    type: "text-dark",
+    title: "Care Service contract",
     description:
-      "Managing large volumes of Cryo-EM data can be challenging, but our platform makes it simple. With intuitive data management tools, you can easily organize, access, and share your datasets. Our application supports a wide range of data formats and integrates seamlessly with existing data repositories, enabling smooth data transfer and collaboration across research teams.",
+      "We provide extended uptime guarantees, priority pipeline execution, and reliability services to ensure your Cryo-EM workloads never face interruptions.",
+  },
+  
+  {
+    type: "text",
+    title: "Custom Automation Solution",
+    description:
+      "Whether you need preprocessing automation, motion correction workflows, or full pipeline orchestration, our solutions are fast, scalable, and cost-efficient.",
+  },
+  {
+    type: "image",
     image: "/analysis.jpg",
   },
-  {
-    title: "Preliminary Single-Particle Analysis",
-    description:
-      "This service analyzes a small dataset (<500 movies) to determine if the sample is suitable for high-resolution single-particle analysis. We’ll run 2D classification, return a low to moderate resolution structure, and estimate how much data you’ll need to achieve your structure goals.",
-    image: "/modelling.jpg",
-  },
-  {
-    title: "Flexible Pricing Plans",
-    description:
-      "We understand that every research project is unique, and so are your budgetary constraints. Our Cryo-EM Cloud Application offers flexible pricing plans tailored to your specific needs. Choose from pay-as-you-go options for occasional use or subscribe to our monthly or annual plans for continuous access to premium features. Our transparent pricing structure ensures that you only pay for the resources you use, with no hidden fees.",
-    image: "/consulation.jpeg",
-  },
-  {
-    title: "Team Collaboration and Support",
-    description:"Our Cryo-EM Cloud Application is designed to facilitate collaboration among research teams. With shared workspaces, real-time data sharing, and role-based access control, you can collaborate efficiently with colleagues across the globe. Additionally, our dedicated support team is available 24/7 to assist with any technical issues, ensuring that your research is never interrupted.",
-    image: "/screening.png",
-  },
+  
 ];
 
 const Services = () => {
   return (
     <div className="services-page">
-      {/* Hero section */}
+      {/* HERO */}
       <div
         className="services-hero"
-        style={{
-          backgroundImage: `url(${backgroundImage})`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          height: "60vh",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-        }}
+        style={{ backgroundImage: `url(${backgroundImage})` }}
       >
         <div className="overlay">
-          <h1 className="hero-title">Our Services</h1>
+          <h1 className="hero-title">
+            SSHexa Services And <span>Solutions</span>
+          </h1>
         </div>
       </div>
 
-      {/* 50-50 layout for each service */}
-      <div className="services-list">
-        {services.map((service, idx) => (
-          <div key={idx} className="service-block">
-            <div className="service-text">
-              <h2>{service.title}</h2>
-              <p>{service.description}</p>
-            </div>
-            <div className="service-image-wrapper">
-              <img
-                src={service.image}
-                alt={service.title}
-                className="service-image"
-              />
-            </div>
+      {/* SERVICE GRID */}
+      <div className="service-grid">
+        {services.map((item, idx) => (
+          <div
+            key={idx}
+            className={
+              item.type === "image"
+                ? "service-tile image-tile"
+                : item.type === "text-dark"
+                ? "service-tile text-dark-tile"
+                : "service-tile text-tile"
+            }
+          >
+            {item.type === "image" ? (
+              <img src={item.image} alt="" className="service-img" />
+            ) : (
+              <div className="service-text-box">
+                <h2>{item.title}</h2>
+                <p>{item.description}</p>
+              </div>
+            )}
           </div>
         ))}
+      </div>
+
+      {/* HOW IT WORKS SECTION */}
+      <div className="how-it-works">
+        <h2 className="hiw-title">
+          How Does It <span>Work</span>
+        </h2>
+
+        {/* Step 1 */}
+        <div className="hiw-block">
+          <div className="hiw-icon">
+            <FaRegFileAlt size={60} color="#1C6DD0" />
+          </div>
+          <div className="hiw-text">
+            <h3>Step 1 – Plan</h3>
+            <p>
+              We begin by understanding your Cryo-EM workflow requirements and
+              designing the right compute + storage architecture for your needs.
+            </p>
+          </div>
+        </div>
+
+        {/* Step 2 */}
+        <div className="hiw-block">
+          <div className="hiw-text">
+            <h3>Step 2 – Prototyping</h3>
+            <p>
+              We build a custom Cryo-EM proof-of-concept pipeline, including
+              motion correction, CTF estimation, and initial 2D classification.
+            </p>
+          </div>
+          <div className="hiw-icon">
+            <FiSend size={70} color="#FFD700" />
+          </div>
+        </div>
+
+        {/* Step 3 */}
+        <div className="hiw-block">
+          <div className="hiw-icon">
+            <FaRegCheckCircle size={65} color="#1C6DD0" />
+          </div>
+          <div className="hiw-text">
+            <h3>Step 3 – Validation</h3>
+            <p>
+              We validate performance, accuracy, reproducibility, and
+              scalability across real Cryo-EM datasets to ensure reliability.
+            </p>
+          </div>
+        </div>
+
+        {/* Step 4 */}
+        <div className="hiw-block">
+          <div className="hiw-text">
+            <h3>Step 4 – Deployment</h3>
+            <p>
+              Your Cryo-EM environment is deployed with automation, monitoring,
+              access controls, and a full support guarantee.
+            </p>
+          </div>
+          <div className="hiw-icon">
+            <FiSend size={65} color="#FFD700" />
+          </div>
+        </div>
       </div>
     </div>
   );

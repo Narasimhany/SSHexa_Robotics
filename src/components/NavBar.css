@@ -127,3 +127,17 @@
     margin: 6px 0;
   }
 }
+.navbar-brand-text {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: rgb(9, 9, 9);
+  letter-spacing: 1px;
+  font-family: 'Poppins', sans-serif;
+}
+
+@media (max-width: 768px) {
+  .navbar-brand-text {
+    font-size: 1.2rem;
+  }
+}
+
