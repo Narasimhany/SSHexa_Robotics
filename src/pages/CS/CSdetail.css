@@ -118,3 +118,24 @@ html {
 .blog-sidebar a:hover {
   text-decoration: underline;
 }
+.figure-caption {
+  font-size: 0.9rem;
+  color: #666;
+  margin-top: -10px;
+  margin-bottom: 25px;
+}
+.back-button {
+  display: inline-block;
+  margin-bottom: 10px;
+  font-size: 1rem;
+  color: #333;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.2s ease;
+}
+
+.back-button:hover {
+  color: #000;
+  text-decoration: underline;
+}
+

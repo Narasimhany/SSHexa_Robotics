@@ -8,7 +8,7 @@ import product2 from "./background.png";
 const blogs = [
   {
     category: "BLOGS",
-    title: "How To Get Started With Automation For SMEs",
+    title: "Introducing VitriFlex: A Modular, Affordable Cryo-EM Grid Freezing Platform",
     description:
       "Robotic automation is emerging as a transformative force that can revolutionize processes, optimize resources, and drive growth. However…",
     readTime: "32 minute read",
@@ -23,6 +23,15 @@ const blogs = [
     readTime: "39 minute read",
     image: product2,
     link: "/blogs/blog2",
+  },
+  {
+    category: "BLOGS",
+    title: "Inside VitriFlex",
+    description:
+      " System Overview and Design of an Cryo-EM Preparation Platform",
+    readTime: "15 minute read",
+    image: product2,
+    link: "/blogs/blog3",
   },
 ];
 

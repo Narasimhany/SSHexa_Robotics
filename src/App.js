@@ -10,6 +10,11 @@ import HomeCTA from "./components/HomeCTA";
 import Footer from "./components/Footer";
 import Blog1 from "./pages/Blogs/Blog1";
 import Blog2 from "./pages/Blogs/Blog2";
+import Blog3 from "./pages/Blogs/Blog3";
+import CS1 from "./pages/CS/CS1";
+import CS2 from "./pages/CS/CS2";
+import Vitriflex from "./pages/Products/Vitriflex";
+
 import './responsive.css';
 
 
@@ -41,6 +46,10 @@ function App() {
         <Route path="/contactus" element={<ContactUs />} />
         <Route path="/blogs/blog1" element={<Blog1 />} />
         <Route path="/blogs/blog2" element={<Blog2 />} />
+        <Route path="/blogs/blog3" element={<Blog3 />} />
+        <Route path="/CS/CS1" element={<CS1 />} />
+        <Route path="/CS/CS2" element={<CS2 />} />
+        <Route path="/products/vitriflex" element={<Vitriflex />} />
       </Routes>
       </div>
       <Footer />

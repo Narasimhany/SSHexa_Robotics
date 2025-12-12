@@ -1,5 +1,6 @@
 import React from "react";
 import "./Products.css";
+import { Link } from "react-router-dom";
 import product1 from "./EPSON.png";
 import product2 from "./background.png";
 
@@ -13,20 +14,22 @@ const Products = () => {
       </p>
 
       <div className="product-grid">
-        <div className="product-card">
-          <img src={product1} alt="Dorna TA" className="product-image" />
+
+        {/* === VITRIFLEX CARD === */}
+        <Link to="/products/vitriflex" className="product-card">
+          <img src={product1} alt="Vitriflex" className="product-image" />
           <div className="product-info">
             <h3 className="product-name">Vitriflex</h3>
             <p className="product-price">$5,990.00</p>
             <p className="product-desc">
-              Vitriflex is a versatile 6-axis tabletop robot engineered to meet
-              the demanding requirements of both industrial and educational
-              sectors at an affordable cost.
+              VitriFlex is an automated cryo-EM preparation robot designed for
+              precision blotting, spraying, and rapid vitrification.
             </p>
-            <p>Know More</p>
+            <p className="know-more">Know More →</p>
           </div>
-        </div>
+        </Link>
 
+        {/* === DORNA 2 CARD (no link added yet) === */}
         <div className="product-card">
           <img src={product2} alt="Dorna 2" className="product-image" />
           <div className="product-info">
@@ -36,9 +39,10 @@ const Products = () => {
               Dorna 2 is an industrial-grade tabletop robotic arm engineered for
               demanding industrial applications.
             </p>
-            <p>Know More</p>
+            <p className="know-more">Know More</p>
           </div>
         </div>
+
       </div>
     </div>
   );

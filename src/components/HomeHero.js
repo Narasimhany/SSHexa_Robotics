@@ -18,9 +18,9 @@ const HomeHero = () => {
       }}
     >
       <Container fluid className="text-center hero-content">
-        <h1 className="hero-title">cryo-em</h1>
+        <h1 className="hero-title">Hexa Robotics</h1>
         <p className="hero-subtext">
-          Our sample-to-structure Cryo-EM services enable novel therapeutic discovery for pharma and biotech companies.
+          High-precision robots engineered to accelerate innovation in cryo-EM sample preparation and laboratory automation.
         </p>
         <div className="hero-buttons">
           {/* 🔗 Navigate to /services */}
@@ -29,15 +29,15 @@ const HomeHero = () => {
             className="me-3"
             onClick={() => navigate("/services")}
           >
-            CRYO-EM SERVICES
+           SERVICES
           </Button>
 
           {/* 🔗 Navigate to /about */}
           <Button
             variant="outline-light"
-            onClick={() => navigate("/about")}
+            onClick={() => navigate("/products")}
           >
-            ABOUT SS Hexa
+            Products
           </Button>
         </div>
       </Container>
